@@ -12,10 +12,6 @@ import java.util.List;
 import static sistemaDeIncidentes.tecnicos.Especialidades.ALMACENAMIENTO;
 import static sistemaDeIncidentes.tecnicos.Especialidades.REDES;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
