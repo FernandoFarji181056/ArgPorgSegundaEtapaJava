@@ -23,7 +23,7 @@ public class App
         TecnicosList tecnicosList = new TecnicosList();
 
 
-        //System.out.println( "Hello World!" );
+        System.out.println( "Original" );
         Tecnico tecnico01 = new Tecnico("Jose","Hernandez","30452366511", TipoDocumento.CUIT_CUIL);
         System.out.println( tecnico01.getApellido());
         tecnico01.agregarEspecialidad(Especialidades.REDES);

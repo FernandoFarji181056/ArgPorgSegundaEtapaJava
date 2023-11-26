@@ -23,6 +23,7 @@ public class TecnicosList {
     public void eliminarTecnico (Tecnico tecnico){
         this.tecnicosList.remove(tecnico);
     }
+
   //  public boolean tieneEspecialidades (Especialidades especialidad){
   //      return this.especialidad.contains(especialidad);
   //  }
