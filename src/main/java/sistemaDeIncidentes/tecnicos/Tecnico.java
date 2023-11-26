@@ -1,6 +1,7 @@
 package sistemaDeIncidentes.tecnicos;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Tecnico {
@@ -10,6 +11,10 @@ public class Tecnico {
     private String numeroDocumento;
     private String mail;
     private TipoDocumento tipoDocumento;
+    private int reclamosAsignados;//cantidad de reclamos activos asignados
+    private int reclamosResueltos;//cantidad de reclamos cerrados
+
+    private Date tiempoPromedio = new Date(2023,2,12,05,13,20);//guardo el tiempo promedio por reclamo
     private List<Especialidades> especialidad;
     //private List<int> entero;
 

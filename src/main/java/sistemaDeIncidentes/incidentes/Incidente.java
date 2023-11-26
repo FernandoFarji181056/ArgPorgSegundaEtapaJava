@@ -12,7 +12,6 @@ public class Incidente {
     private Cliente cliente;
     private Tecnico tecnicoAsignado;
     private Especialidades problemaAsignado;
-
     private LocalDateTime horaInicio;
     private LocalDateTime horaFin;
 
