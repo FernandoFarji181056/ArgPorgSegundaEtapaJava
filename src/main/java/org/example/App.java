@@ -14,14 +14,14 @@ import java.util.Date;
 import java.util.List;
 import java.util.function.ToDoubleBiFunction;
 
-import static sistemaDeIncidentes.tecnicos.Especialidades.ALMACENAMIENTO;
-import static sistemaDeIncidentes.tecnicos.Especialidades.REDES;
+import static sistemaDeIncidentes.tecnicos.Especialidades.*;
 
 public class App
 
 {
     static LocalDateTime fecha01=LocalDateTime.now();
-
+    static List<TecnicosList> tecnicosList;
+    static List<TecnicosList> tecnicosConLasCapacidadesParaLaReparaccion;
     //static LocalDateTime fecha02=LocalDateTime.now();
 
     //static long tiempo_transcurrido = fecha02.getMinute() - fecha01.getMinute();
@@ -36,6 +36,7 @@ public class App
     {
 
         TecnicosList tecnicosList = new TecnicosList();
+        TecnicosList tecnicosConLasCapacidadesParaLaReparaccion = new TecnicosList();
 
         System.out.println( "Original02" );
         Tecnico tecnico01 = new Tecnico("Jose","Hernandez","30452366511", TipoDocumento.CUIT_CUIL);
@@ -100,6 +101,21 @@ public class App
         //me falta recorrer la coleccion de tecnicos para saber cuales pueden encargarse de ese problema
         //luego, de esos, ver cuales tienen menos Incidentes activos, luego asignarele el incidiente y guardar la fecha
         //luego cerrar los incidentes, y actualizar todo una vez cerrado (cantidad de incidentes de cada tecnico y promedio)
+
+        tecnico02.setReclamosActivos(3);//le seteo manualmente reclamos activos para elegir al que menos tiene y asignarle una reparacion de Sistemas Operativos
+        tecnico03.setReclamosActivos(1);
+        tecnico04.setReclamosActivos(4);
+
+        System.out.println("el tecnico 02 tiene " + tecnico02.getReclamosActivos() + " reclamos activos");
+
+     //   tengo que hacer una lista con los tecnicos capacitados para ese arreglo (usar find) (en este caso reparacion de Sistemas Operativo)
+        //luego de eso ver quien tiene menos reclamos activos, luego asignarle este Incidente. Luego cerrar el incidente y guardar el tiempo de reparacion
+
+
+
+
+
+
 
 
     }

@@ -11,8 +11,9 @@ public class Tecnico {
     private String numeroDocumento;
     private String mail;
     private TipoDocumento tipoDocumento;
-    private int reclamosAsignados;//cantidad de reclamos activos asignados
+    private int reclamosActivos;//cantidad de reclamos activos asignados
     private int reclamosResueltos;//cantidad de reclamos cerrados
+    private long tiempoTotalDeTodosLosCasosRueltos;
 
     private Date tiempoPromedio = new Date(2023,2,12,05,13,20);//guardo el tiempo promedio por reclamo
     private List<Especialidades> especialidad;
@@ -24,6 +25,22 @@ public class Tecnico {
         this.apellido = apellido;
         this.numeroDocumento = numeroDocumento;
         this.tipoDocumento = tipoDocumento;
+    }
+
+    public int getReclamosActivos() {
+        return reclamosActivos;
+    }
+
+    public void setReclamosActivos(int reclamosActivos) {
+        this.reclamosActivos = reclamosActivos;
+    }
+
+    public int getReclamosResueltos() {
+        return reclamosResueltos;
+    }
+
+    public void setReclamosResueltos(int reclamosResueltos) {
+        this.reclamosResueltos = reclamosResueltos;
     }
 
     public String getMail() {
@@ -75,6 +92,9 @@ public class Tecnico {
     }
     public boolean tieneEspecialidades (Especialidades especialidad){
         return this.especialidad.contains(especialidad);
+    }
+    public long promedioPorReparacion(){
+        return tiempoTotalDeTodosLosCasosRueltos / reclamosResueltos;
     }
 
     public int cantEspecialidades(){
